@@ -1,4 +1,6 @@
 import Bank from "@/libs/Bank"
+import Category from "./Category"
+import Payee from "./Payee"
 
 class User {
   code: Number
@@ -8,6 +10,8 @@ class User {
   modifiedAt: Date
   createdAt: Date
   banks: [Bank]
+  categories: [Category]
+  payees: [Payee]
 
   constructor(
     code: Number,
@@ -16,7 +20,9 @@ class User {
     password: String,
     modifiedAt: Date,
     createdAt: Date,
-    banks: [Bank]
+    banks: [Bank],
+    categories: [Category],
+    payees: [Payee]
   ) {
     this.code = code
     this.name = name
@@ -25,5 +31,9 @@ class User {
     this.modifiedAt = modifiedAt
     this.createdAt = createdAt
     this.banks = banks
+    this.categories = categories
+    this.payees = payees
   }
 }
+
+export default User
